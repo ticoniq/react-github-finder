@@ -1,4 +1,4 @@
-import UserResults from "../components/layouts/UserResults"
+import UserResults from "../components/users/UserResults";
 
 function Home() {
   return (
@@ -6,7 +6,7 @@ function Home() {
       {/* Search component  */}
       <UserResults />
     </>
-  )
+  );
 }
 
-export default Home
+export default Home;
