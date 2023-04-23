@@ -4,18 +4,20 @@ import GithubContext from "../../context/github/GithubContext";
 function UserSearch() {
   const [text, setText] = useState("");
 
-  const { users } = useContext(GithubContext);
+  const { users, searchUsers } = useContext(GithubContext);
 
   const handleChange = (e) => setText(e.target.value);
 
   const handleSubmit = (e) => {
+    e.preventDefault();
+
     if (text === "") {
       alert("Please enter something");
     } else {
-      // Todo search users
+      searchUsers(text);
+
       setText("");
     }
-    e.preventDefault();
   };
 
   return (
